@@ -6,8 +6,7 @@
     "defaultProvider": "openai",
     "supportedProviders": [
       "openai",
-      "anthropic",
-      "google"
+      "deepseek"
     ],
     "defaultModel": "gpt-3.5-turbo",
     "maxTokens": 1000,
@@ -21,6 +20,16 @@
     "bugReportGenerator": {
       "enabled": true,
       "promptTemplate": "Создай подробный баг-репорт для следующей проблемы: {prompt}\n\nБаг-репорт должен содержать: ID, заголовок, описание, шаги воспроизведения, ожидаемый результат, фактический результат, приоритет, серьезность."
+    }
+  },
+  "pages": {
+    "openai": {
+      "path": "index.html",
+      "description": "Версия с OpenAI API"
+    },
+    "deepseek": {
+      "path": "deepseek.html",
+      "description": "Версия с DeepSeek API через Google Apps Script"
     }
   }
 }

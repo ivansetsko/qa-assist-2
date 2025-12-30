@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QA Assistant - Помощник для тестировщиков</title>
+    <title>QA Assistant - DeepSeek Версия</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>QA Assistant</h1>
-            <p>Интеллектуальный помощник для тестировщиков</p>
+            <h1>QA Assistant - DeepSeek Версия</h1>
+            <p>Интеллектуальный помощник для тестировщиков с использованием DeepSeek API</p>
         </div>
     </header>
 
     <main>
         <div class="container">
             <div class="api-key-section">
-                <label for="apiKey">Ваш API-ключ:</label>
-                <input type="password" id="apiKey" placeholder="Введите ваш API-ключ">
-                <button id="saveApiKey" class="btn">Сохранить</button>
+                <label for="scriptId">ID Google Apps Script:</label>
+                <input type="text" id="scriptId" placeholder="Введите ID вашего скрипта GAS" value="">
+                <button id="saveScriptId" class="btn">Сохранить</button>
             </div>
 
             <div class="features">
                 <div class="feature-card">
-                    <h2>Генерация тест-кейсов</h2>
+                    <h2>Генерация тест-кейсов (DeepSeek)</h2>
                     <p>Опишите функционал, для которого нужны тест-кейсы, и наш ИИ создаст их за вас</p>
                     <textarea id="testCasePrompt" placeholder="Введите описание функционала..."></textarea>
                     <button id="generateTestCase" class="btn">Сгенерировать тест-кейсы</button>
@@ -32,16 +32,12 @@
                 </div>
 
                 <div class="feature-card">
-                    <h2>Создание баг-репортов</h2>
+                    <h2>Создание баг-репортов (DeepSeek)</h2>
                     <p>Опишите проблему, и ИИ поможет составить подробный баг-репорт</p>
                     <textarea id="bugReportPrompt" placeholder="Опишите проблему..."></textarea>
                     <button id="generateBugReport" class="btn">Создать баг-репорт</button>
                     <div id="bugReportResult" class="result-box"></div>
                 </div>
-            </div>
-            
-            <div class="alternative-provider">
-                <p>Также доступна <a href="deepseek.html">версия с DeepSeek API</a> для альтернативной интеграции.</p>
             </div>
         </div>
     </main>
@@ -52,6 +48,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="deepseek-script.js"></script>
 </body>
 </html>
