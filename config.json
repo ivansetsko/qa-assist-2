@@ -1,0 +1,26 @@
+{
+  "appName": "QA Assistant",
+  "description": "Интеллектуальный помощник для тестировщиков",
+  "version": "1.0.0",
+  "apiConfig": {
+    "defaultProvider": "openai",
+    "supportedProviders": [
+      "openai",
+      "anthropic",
+      "google"
+    ],
+    "defaultModel": "gpt-3.5-turbo",
+    "maxTokens": 1000,
+    "temperature": 0.7
+  },
+  "features": {
+    "testCaseGenerator": {
+      "enabled": true,
+      "promptTemplate": "Напиши подробные тест-кейсы для следующего функционала: {prompt}\n\nТест-кейс должен содержать: ID, название, предусловия, шаги, ожидаемый результат."
+    },
+    "bugReportGenerator": {
+      "enabled": true,
+      "promptTemplate": "Создай подробный баг-репорт для следующей проблемы: {prompt}\n\nБаг-репорт должен содержать: ID, заголовок, описание, шаги воспроизведения, ожидаемый результат, фактический результат, приоритет, серьезность."
+    }
+  }
+}

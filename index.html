@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Assistant - Помощник для тестировщиков</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>QA Assistant</h1>
+            <p>Интеллектуальный помощник для тестировщиков</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="api-key-section">
+                <label for="apiKey">Ваш API-ключ:</label>
+                <input type="password" id="apiKey" placeholder="Введите ваш API-ключ">
+                <button id="saveApiKey" class="btn">Сохранить</button>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h2>Генерация тест-кейсов</h2>
+                    <p>Опишите функционал, для которого нужны тест-кейсы, и наш ИИ создаст их за вас</p>
+                    <textarea id="testCasePrompt" placeholder="Введите описание функционала..."></textarea>
+                    <button id="generateTestCase" class="btn">Сгенерировать тест-кейсы</button>
+                    <div id="testCaseResult" class="result-box"></div>
+                </div>
+
+                <div class="feature-card">
+                    <h2>Создание баг-репортов</h2>
+                    <p>Опишите проблему, и ИИ поможет составить подробный баг-репорт</p>
+                    <textarea id="bugReportPrompt" placeholder="Опишите проблему..."></textarea>
+                    <button id="generateBugReport" class="btn">Создать баг-репорт</button>
+                    <div id="bugReportResult" class="result-box"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>QA Assistant &copy; 2023 - Интеллектуальный помощник для тестировщиков</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
